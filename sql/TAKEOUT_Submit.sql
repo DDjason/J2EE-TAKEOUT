@@ -1,0 +1,57 @@
+-- MySQL dump 10.13  Distrib 5.7.12, for Linux (x86_64)
+--
+-- Host: localhost    Database: TAKEOUT
+-- ------------------------------------------------------
+-- Server version	5.7.12-0ubuntu1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Submit`
+--
+
+DROP TABLE IF EXISTS `Submit`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Submit` (
+  `c_编号` varchar(15) CHARACTER SET utf8 DEFAULT NULL,
+  `o_编号` int(11) DEFAULT NULL,
+  `s_编号` varchar(5) DEFAULT NULL,
+  `S_下单时间` datetime DEFAULT NULL,
+  `S_预计送达` datetime DEFAULT NULL,
+  `S_下单成功` tinyint(1) DEFAULT NULL,
+  KEY `S_C` (`c_编号`),
+  KEY `S_O` (`o_编号`),
+  KEY `S_S` (`s_编号`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Submit`
+--
+
+LOCK TABLES `Submit` WRITE;
+/*!40000 ALTER TABLE `Submit` DISABLE KEYS */;
+INSERT INTO `Submit` VALUES ('c001',1000010,'s0001',NULL,NULL,NULL),('c001',1000010,'s0001',NULL,NULL,NULL);
+/*!40000 ALTER TABLE `Submit` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-06-25 15:13:37
